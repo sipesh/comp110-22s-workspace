@@ -13,17 +13,16 @@ if len(letter) > 1:
 print("Searching for " + letter + " in " + word)
 
 if word[0] == letter:
-    print(letter, "is at index 0")
-else: 
-    if word[1] == letter:   
+    print(letter, "is at index 0") 
+elif word[1] == letter:   
         print(letter, "is at index 1")
-    if word[2] == letter:
+elif word[2] == letter:
         print(letter, "is at index 2")
-    if word[3] == letter:
+elif word[3] == letter:
         print(letter, "is at index 3")
-    if word[4] == letter:
+elif word[4] == letter:
         print(letter, "is at index 4")
-    else:
+else:
         print("no letter found")
 
 
