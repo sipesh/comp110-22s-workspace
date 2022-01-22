@@ -15,15 +15,15 @@ print("Searching for " + letter + " in " + word)
 if word[0] == letter:
     print(letter, "is at index 0") 
 elif word[1] == letter:   
-        print(letter, "is at index 1")
+    print(letter, "is at index 1")
 elif word[2] == letter:
-        print(letter, "is at index 2")
+    print(letter, "is at index 2")
 elif word[3] == letter:
-        print(letter, "is at index 3")
+    print(letter, "is at index 3")
 elif word[4] == letter:
-        print(letter, "is at index 4")
+    print(letter, "is at index 4")
 else:
-        print("no letter found")
+    print("no letter found")
 
 
 count: int = word.count(letter)
