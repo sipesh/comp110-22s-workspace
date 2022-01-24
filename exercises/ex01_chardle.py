@@ -13,23 +13,31 @@ if len(letter) > 1 or len(letter) < 1:
     exit()
 print("Searching for " + letter + " in " + word)
 
+new_count: int = 0 
 if word[0] == letter:
     print(letter, "found at index 0")
+    new_count = new_count + 1
 if word[1] == letter:   
     print(letter, "found at index 1")
+    new_count = new_count + 1 
 if word[2] == letter:
     print(letter, "found at index 2")
+    new_count = new_count + 1
 if word[3] == letter:
     print(letter, "found at index 3")
+    new_count = new_count + 1
 if word[4] == letter:
     print(letter, "found at index 4")
+    new_count = new_count + 1
 
-count: int = word.count(letter)
 
-if count == 0:
+
+
+
+if new_count == 0:
     print("No instances of", letter, "found in", word)
 else:
-    if count == 1:
+    if new_count == 1:
         print("1 instance of", letter, "found in", word)
-    if count == 2 or count == 3 or count == 4 or count == 5:
-        print(count, "instances of", letter, "found in", word)
+    if new_count == 2 or new_count == 3 or new_count == 4 or new_count == 5:
+        print(new_count, "instances of", letter, "found in", word)
