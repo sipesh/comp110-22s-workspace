@@ -30,10 +30,6 @@ if word[4] == letter:
     print(letter, "found at index 4")
     new_count = new_count + 1
 
-
-
-
-
 if new_count == 0:
     print("No instances of", letter, "found in", word)
 else:
