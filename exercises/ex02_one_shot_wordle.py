@@ -1,3 +1,6 @@
+"""One shot wordle."""
+__author__ = "730469262"
+
 SECRET = "python"
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -28,6 +31,8 @@ print(final_emoji)
           
 if guess == SECRET:
     print("Woo! You got it!")
+
+  
  
 
 
