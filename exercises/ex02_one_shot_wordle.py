@@ -25,8 +25,7 @@ while index < len(SECRET):
             final_emoji = final_emoji + WHITE_BOX
     index = index + 1
 print(final_emoji)
-
-            
+          
 if guess == SECRET:
     print("Woo! You got it!")
  
