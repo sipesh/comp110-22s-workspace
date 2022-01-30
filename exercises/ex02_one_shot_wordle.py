@@ -13,7 +13,8 @@ guess: str = input("What is your 6-letter guess? ")
 
 while len(guess) != 6:  
     guess = input("That was not 6 letters! Try again: ")
-     
+    if len(guess) == len(SECRET) and guess != SECRET:
+        print("try again. ")
 while index < len(SECRET):
     if guess[index] == SECRET[index]:
         final_emoji = final_emoji + GREEN_BOX
@@ -26,12 +27,16 @@ while index < len(SECRET):
             final_emoji = final_emoji + YELLOW_BOX
         else:
             final_emoji = final_emoji + WHITE_BOX
+        new_index = 0
+        character_not_in_word = False
     index = index + 1
 print(final_emoji)
-          
+
+
 if guess == SECRET:
     print("Woo! You got it!")
-
+else:
+    print("Not quite. Play again soon!")
   
  
 
