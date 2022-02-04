@@ -2,10 +2,6 @@
 __author__ = "730469262"
 
 
-# SECRET = "codes"
-# guess: str = input("enter a 5 letter word: ")
-# index: int = 0
-
 def contains_char(secret: str, character: str) -> bool:
     """Testing length of string."""
     assert len(character) == 1
