@@ -1,4 +1,4 @@
-"""Drawing a house with three windows and a tree with random stars."""
+"""Drawing a house with a blue roof found on lines 10-23 and the base of the house in red found on lines 26-39, three yellow windows found on lines 42-55. Green Tree's found on lines 58-66, and the brown treestump with a pink curser found on lines 69-83. Random stars."""
 
 __author__ = "730469262"
 
