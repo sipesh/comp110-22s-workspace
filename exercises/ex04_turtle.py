@@ -1,4 +1,4 @@
-"""Drawing a house with three windows."""
+"""Drawing a house with three windows and a tree with random stars."""
 
 __author__ = "730469262"
 
@@ -29,7 +29,7 @@ def draw_a_rectangle(a_rectangle: Turtle, x: float, y: float, width: float) -> N
     rectangle.goto(x, y)
     rectangle.pendown()
     i: int = 0
-    rectangle.fillcolor("maroon")
+    rectangle.fillcolor("red")
     rectangle.begin_fill()
     while(i < 4):
         rectangle.begin_fill()
