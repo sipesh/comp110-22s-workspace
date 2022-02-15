@@ -2,8 +2,9 @@
 
 __author__ = "730469262"
 
-from turtle import Turtle, colormode, done, end_fill
+from turtle import Turtle, colormode, done
 from random import randint
+colormode(255)
 
 
 def draw_a_triangle(a_triangle: Turtle, x: float, y: float, width: float) -> None:
@@ -32,7 +33,6 @@ def draw_a_rectangle(a_rectangle: Turtle, x: float, y: float, width: float) -> N
     rectangle.fillcolor("red")
     rectangle.begin_fill()
     while(i < 4):
-        rectangle.begin_fill()
         rectangle.forward(130)
         rectangle.left(90)
         i = i + 1
@@ -93,15 +93,7 @@ def draw_stars(x: float, y: float) -> None:
     while turns > 0:
         stars.forward(25)
         stars.left(145)
-        turns = turns - 1
-
-
-rand_stars = 0
-while rand_stars < 5:
-    x = randint(-200, 200)
-    y = randint(-200, 100)
-    draw_stars(x, y)
-    rand_stars = rand_stars + 1 
+        turns = turns - 1 
 
 
 def main() -> None:
@@ -116,8 +108,14 @@ def main() -> None:
     tree_circle(ertle, 30, 80, -40)
     tree_circle(ertle, -10, 80, -40)
     tree_circle(ertle, 10, 120, -40)
-    draw_stars(x, y)
+    rand_stars = 0
+    while rand_stars < 5:
+        x = randint(-200, 200)
+        y = randint(-200, 100)
+        draw_stars(x, y)
+        rand_stars = rand_stars + 1 
     done()
 
 
-main()
+if __name__ == "__main__":
+    main()
