@@ -30,7 +30,7 @@ def test_sub_list() -> None:
     a_list: list[int] = [10, 20, 40, 50]
     y = 1
     z = 3
-    assert sub(a_list, y, z) == [a_list, 20, 40]
+    assert sub(a_list, y, z) == [20, 40]
 
 
 def test_sub_negative() -> None:
