@@ -1,7 +1,6 @@
 """Dictionary related utility functions."""
 
 from csv import DictReader
-from string import hexdigits
 
 __author__ = ""
 
