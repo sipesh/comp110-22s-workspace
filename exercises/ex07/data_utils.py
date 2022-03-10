@@ -50,7 +50,7 @@ def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     for column in table:
         items: int = 0
         empty: list[str] = []
-        while items < N:
+        while items <= N:
             empty.append(table[column][items])
             items = items + 1
         result[column] = empty
