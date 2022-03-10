@@ -48,6 +48,8 @@ def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     """Makes a new column-based table with only the first N rows of data for each column."""
     result: dict[str, list[str]] = {}
     for column in table:
+        if N > len(table[column]):
+            N = len(table[column])
         items: int = 0
         empty: list[str] = []
         while items < N:
