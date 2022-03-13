@@ -2,7 +2,7 @@
 
 from csv import DictReader
 
-__author__ = ""
+__author__ = "730469262"
 
 
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
