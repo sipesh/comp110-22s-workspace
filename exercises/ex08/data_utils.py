@@ -85,7 +85,7 @@ def count(data: list[str]) -> dict[str, int]:
 
 
 def greater_than(values: dict[str, list[str]], x: int) -> list[str]:
-    """Takes in a list[int] and returns a new list[int] where if a value in the old list is greater than the specified int of x, the value is appended to the new list."""
+    """Takes in a dict[str, list[str]] and returns a new list[str] where if a value in the old list is greater than the specified int of x, the value is appended to the new list."""
     result: list[str] = []
     i: int = 0
     for column in values:
