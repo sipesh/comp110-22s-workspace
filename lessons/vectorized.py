@@ -13,9 +13,15 @@ class StrArray:
     def __add__(self, rhs: str) -> StrArray:
         """Vectorized concatenation operator."""
         result: list[str] = []
-        # Loop through each item in self.items
-        for item in self.items:
-            result.append(item + rhs)
+
+        if isinstance(rhs, str):
+            for item in self.items:
+                result.append(item + rhs)
+        else:
+            assert len(self.items) == len(rhs.items)
+            for i in range(0, len(self.items)):
+                result.append(self.items[i] + rhs.items[i])
+        
         return StrArray(result)
 
 
