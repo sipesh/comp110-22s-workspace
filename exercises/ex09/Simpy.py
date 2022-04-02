@@ -40,9 +40,8 @@ class Simpy:
         return sum(self.values)
         
     def __add__(self, rhs: Union[float, Simpy]) -> Simpy:
-        """Vectorized concatenation operator."""
+        """Adds together Simpy objects."""
         result: list[float] = []
-
         if isinstance(rhs, float):
             for item in self.values:
                 result.append(item + rhs)
@@ -54,9 +53,8 @@ class Simpy:
         return Simpy(result)
 
     def __pow__(self, rhs: Union[float, Simpy]) -> Simpy:
-        """Vectorized concatenation operator."""
+        """Raises Simpy object to powers."""
         result: list[float] = []
-
         if isinstance(rhs, float):
             for item in self.values:
                 result.append(item ** rhs)
@@ -68,8 +66,8 @@ class Simpy:
         return Simpy(result)
 
     def __eq__(self, rhs: Union[float, Simpy]) -> list[bool]:
-        result: list[bool] = []
 
+        result: list[bool] = []
         if isinstance(rhs, bool):
             for item in self.values:
                 result.append(item == rhs)
@@ -77,7 +75,6 @@ class Simpy:
             assert len(self.values) == len(rhs.values)
             for i in range(0, len(self.values)):
                 result.append(self.values[i] == rhs.values[i])
-        
         return Simpy(result)
 
         
