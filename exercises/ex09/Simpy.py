@@ -14,6 +14,10 @@ class Simpy:
         """Initializes the values attribute to the argument passed in."""
         self.values = values
 
+    def __repr__(self) -> str:
+        """Special method to represent object as strings."""
+        return f"Simpy{self.values}"
+    
     def __str__(self) -> str:
         """Function is called when a Simpy object is converted to a str representation."""
         return f"Simpy{self.values}"
