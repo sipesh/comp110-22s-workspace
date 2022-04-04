@@ -7,6 +7,7 @@ __author__ = "730469262"
 
 
 class Simpy:
+    """This is a useful class for working with sequences of numerical data."""
     values: list[float]
 
     def __init__(self, values: list[float]):
@@ -35,6 +36,7 @@ class Simpy:
         self.values = empty
 
     def sum(self) -> float:
+        """Returns the sum."""
         return sum(self.values)
         
     def __add__(self, rhs: Union[float, Simpy]) -> Simpy:
