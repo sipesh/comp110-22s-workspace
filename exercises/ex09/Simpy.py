@@ -1,8 +1,6 @@
 """Utility class for numerical operations."""
 
 from __future__ import annotations
-from asyncio import start_server
-
 from typing import Union
 
 __author__ = "730469262"
@@ -66,15 +64,38 @@ class Simpy:
         return Simpy(result)
 
     def __eq__(self, rhs: Union[float, Simpy]) -> list[bool]:
-
+        """Checks if Simpy objects are equal."""
         result: list[bool] = []
-        if isinstance(rhs, bool):
+        if isinstance(rhs, float):
             for item in self.values:
                 result.append(item == rhs)
         else:
             assert len(self.values) == len(rhs.values)
             for i in range(0, len(self.values)):
                 result.append(self.values[i] == rhs.values[i])
-        return Simpy(result)
+        return result
 
+    def __gt__(self, rhs: Union[float, Simpy]) -> list[bool]:
+        """Checks if Simpy objects are greater than."""
+        result: list[bool] = []
+        if isinstance(rhs, float):
+            for item in self.values:
+                result.append(item > rhs)
+        else:
+            assert len(self.values) == len(rhs.values)
+            for i in range(0, len(self.values)):
+                result.append(self.values[i] > rhs.values[i])
+        return result
         
+    def __getitem__(self, rhs: Union[int, list[bool]]) -> Union[float, Simpy]:
+        """Uses subsciption notation and creates a mask to check if it is true or false."""
+        if isinstance(rhs, int):
+            return self.values[rhs]
+        else:
+            i: int = 0
+            empty: list[float] = []
+            while i < len(rhs):
+                if rhs[i]:
+                    empty.append(self.values[i])
+                i += 1
+        return Simpy(empty)
