@@ -13,14 +13,10 @@ class Simpy:
     def __init__(self, values: list[float]):
         """Initializes the values attribute to the argument passed in."""
         self.values = values
-
-    def __repr__(self) -> str:
-        """Special method to represent object as strings."""
-        return f"Simpy{self.values}"
-    
+        
     def __str__(self) -> str:
         """Function is called when a Simpy object is converted to a str representation."""
-        return f"Simpy{self.values}"
+        return f"Simpy({self.values})"
     
     def fill(self, x: float, y: int) -> None:
         """Fills a Simpy's values with a specific number of repeating values."""
@@ -31,10 +27,13 @@ class Simpy:
             i += 1
         self.values = empty 
 
-    def arange(self, start: float, stop: float, step: float = 1.0):
+    def arange(self, start: float, stop: float, step: float = 1.0) -> None:
         """Fills in the values attribute with range of values."""
         empty: list[float] = []
         while start < stop:
+            empty.append(start)
+            start = start + step
+        while start > stop:
             empty.append(start)
             start = start + step
         self.values = empty
