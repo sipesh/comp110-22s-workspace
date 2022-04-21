@@ -72,14 +72,10 @@ def max(head: Optional[Node]) -> int:
 
 def linkify(items: list[int]) -> Optional[Node]: 
     """Given a list of ints, the function returns a Linked List of Nodes with the same values as the input list."""
-    if items is None:
+    if items == []:
         return None
     else:
-        values = linkify(items)
-        if len(items) < values.data:
-            return linkify(items)
-        else:
-            return values
+        return Node(items[0], linkify(items[1:]))
 
 
 def scale(head: Optional[Node], factor: int) -> Optional[Node]:

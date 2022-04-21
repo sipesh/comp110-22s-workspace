@@ -48,12 +48,13 @@ def test_linkify_list() -> None:
     """Tests a list to see if function returns a Linked List of Nodes with same value as input list."""
     linked_list = Node(10, Node(20, Node(30, None))) 
     list_items = [10, 20, 30]
-    assert is_equal(linkify(list_items), linked_list) 
+    items = linkify(list_items)
+    assert is_equal(items, linked_list) 
 
 
 def test_linkify_empty() -> None:
     """Tests an empty list to see if linkify returns None."""
-    linked_list = Node(10, Node(20, Node(30, None)))
+    linked_list = None
     list_items = []
     assert is_equal(linkify(list_items), linked_list)
 
@@ -61,10 +62,10 @@ def test_linkify_empty() -> None:
 def test_scale_linked_list() -> None:
     """Tests a linked list and returns a new list of nodes scaled by the factor."""
     items = [1, 2, 3]
-    assert scale(linkify(items), 2) 
+    assert is_equal(scale(linkify(items), 2), linkify([2, 4, 6])) 
 
 
 def test_scale_empty() -> None:
     """Tests an empty linked list."""
     items = []
-    assert scale(linkify(items), 2)
+    assert is_equal(scale(linkify(items), 2), None)
